@@ -78,7 +78,7 @@ function checkAnswer(currentLevel) {
         $("h1").text("Game Over, Press Any Key/Tap on start to Restart");
 
         $(".start-btn").show(100);
-        $(".start-btn").text("Restar");
+        $(".start-btn").text("Restart");
         $(".start-btn").click(function() {
             $(".start-btn").hide(100);
             if(!started){
