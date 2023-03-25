@@ -64,7 +64,7 @@ function checkAnswer(currentLevel) {
 
         //calling funtion after game over
         $(".start-btn").show(100);
-        $(".start-btn").text("Restar");
+        $(".start-btn").text("Restart");
         $(".start-btn").click(function() {
             $(".start-btn").hide(100);
             if(!started){
