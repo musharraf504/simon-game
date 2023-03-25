@@ -28,6 +28,20 @@ body {
   border: 10px solid black;
   border-radius: 20%;
 }
+.start-btn{
+  margin: 25px;
+  display: inline-block;
+  height: 50px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 20px;
+  font-size: 3rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  background-color: white;
+  border-color: green;
+  cursor: pointer;
+}
 
 .game-over {
   background-color: red;
