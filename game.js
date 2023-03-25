@@ -3,9 +3,23 @@ var gamePattern=[];
 var userClickedPattern=[];
 var level=0;
 var started=false;
+$(".help").hide();
+$(".guide").click(function(){
+    
+    $(".help").fadeIn(100);
+    $(".bg").addClass("background");
+    // $("body").addClass("body-opacity");
+    $(".guide").hide(100);
+});
+$("span").click(function(){
+    $(".guide").show(100);
+    $(".help").fadeOut(100);
+});
+
 
 $(document).keypress(function() {
     if(!started){
+        $("p").hide(100);
         $(".start-btn").hide(100);
         $("h1").text("Level "+level);
         nextSequence();
@@ -13,6 +27,7 @@ $(document).keypress(function() {
     }
 });
 $(".start-btn").click(function() {
+    // $("p").hide(100);
     $(".start-btn").hide(100);
     if(!started){
         
@@ -49,7 +64,7 @@ function checkAnswer(currentLevel) {
             },1000);
         }
     }else{
-        var audio = new Audio("wrong.mp3");
+        var audio = new Audio("sounds/wrong.mp3");
         audio.play();
         console.log("wrong");
 
@@ -62,9 +77,8 @@ function checkAnswer(currentLevel) {
 
         $("h1").text("Game Over, Press Any Key/Tap on start to Restart");
 
-        //calling funtion after game over
         $(".start-btn").show(100);
-        $(".start-btn").text("Restart");
+        $(".start-btn").text("Restar");
         $(".start-btn").click(function() {
             $(".start-btn").hide(100);
             if(!started){
@@ -74,6 +88,8 @@ function checkAnswer(currentLevel) {
                 started=true;
             }
         });
+        
+        //calling funtion after game over
 
         gameOver();
     }
@@ -98,7 +114,7 @@ function nextSequence() {
 // playing sound
 
 function playSound(name){
-    var audio = new Audio(name+".mp3");
+    var audio = new Audio("sounds/"+name+".mp3");
     audio.play();
 }
 

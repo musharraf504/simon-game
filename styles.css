@@ -3,6 +3,10 @@ body {
   padding: 0;
   text-align: center;
   background-color: #011F3F;
+  
+}
+.body-opacity{
+  opacity: 0.5;
 }
 
 #level-title {
@@ -42,6 +46,21 @@ body {
   border-color: green;
   cursor: pointer;
 }
+.restart-btn{
+  margin: 25px;
+  display: inline-block;
+  height: 50px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 20px;
+  font-size: 3rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  background-color: white;
+  border-color: green;
+  cursor: pointer;
+}
+
 
 .game-over {
   background-color: red;
@@ -71,8 +90,78 @@ body {
 .last-line{
   /* font-family: 'Press Start 2P', scursive; */
   font-family: monospace;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin:  5%;
   color: #FEF2BF;
 }
 
+.guide{
+  font-size: 1rem;
+  color: white;
+  font-family: monospace;
+  text-decoration: underline;
+  color: lightblue;
+  /* color: yellow; */
+}
+
+.background{
+  height: 100%;
+  color: black;
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.help{
+  position: absolute;
+    z-index: 5;
+    /* margin: 50px; */
+    padding: 50px;
+    background-color: #011F3F;
+    color: white;
+    font-size: 3rem;
+    font-family: monospace;
+    height: 100%;
+}
+span{
+  cursor: pointer;
+}
+.guide{
+  cursor: pointer;
+}
+
+td{
+  background-color: #013063;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+@media (max-width: 1080px){
+  .guide{
+    font-size: 3rem;
+  }
+  body{
+    overflow: hidden;
+  }
+
+  .btn {
+    margin: 25px;
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    border: 10px solid black;
+    border-radius: 20%;
+  }
+
+  .help{
+    position: absolute;
+    z-index: 5;
+    /* margin: 50px; */
+    padding: 50px;
+    background-color: #011F3F;
+    color: white;
+    font-size: 3rem;
+    font-family: monospace;
+    height: 100%;
+  }
+  
+}
